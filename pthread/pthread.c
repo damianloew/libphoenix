@@ -24,19 +24,6 @@
 
 #define CEIL(value, size)	((((value) + (size) - 1) / (size)) * (size))
 
-
-typedef struct pthread_ctx {
-	handle_t id;
-	void *(*start_routine)(void *);
-	void *arg;
-	void *retval;
-	struct pthread_ctx *next;
-	struct pthread_ctx *prev;
-	int detached;
-	struct __errno_t e;
-} pthread_ctx;
-
-
 static pthread_ctx *pthread_list = NULL;
 
 

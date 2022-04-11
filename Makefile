@@ -66,7 +66,8 @@ include syslog/Makefile
 include termios/Makefile
 include time/Makefile
 include unistd/Makefile
-
+include uuid/Makefile
+include wchar/Makefile
 #include test/Makefile
 
 $(PREFIX_A)libphoenix.a: $(OBJS)
